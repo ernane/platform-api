@@ -1,8 +1,6 @@
+from typing import Any, List, Optional
+
 from fastapi import APIRouter
-from typing import Any, List
-
-from typing import Optional
-
 from pydantic import BaseModel
 
 
@@ -29,14 +27,8 @@ class Item(ItemInDBBase):
 
 router = APIRouter()
 
+
 @router.get("/", response_model=List[Item])
 def read_items() -> Any:
-    data = [
-        {
-            "title": "string",
-            "description": "string",
-            "id": 0,
-            "owner_id": 0
-        }
-    ]
+    data = [{"title": "string", "description": "string", "id": 0, "owner_id": 0}]
     return data
