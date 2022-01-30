@@ -1,0 +1,6 @@
+[submodule "docker-hbase"]
+	path = docker-hbase
+	url = git@github.com:big-data-europe/docker-hbase.git
+[submodule "hbase-docker"]
+	path = hbase-docker
+	url = git@github.com:dajobe/hbase-docker.git
